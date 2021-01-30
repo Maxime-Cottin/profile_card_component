@@ -1,0 +1,44 @@
+/* Normalize the body of the page */
+body {
+   margin: 0;
+   padding: 0;
+   background-color: hsl(185, 75%, 39%);
+   font-size: 18px;
+   font-family: 'Kumbh Sans', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+/* Formatting the profile card */
+#container {
+   display: flex;
+   flex-direction: column;
+}
+
+.cardContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: white;
+   border-radius: 1em;
+   width: 50%;
+   height: 50%;
+}
+
+.botCard {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+/* Placing the background image */
+.bgTop {
+   position: absolute;
+   z-index: -1;
+}
+
+.bgBot {
+   position: absolute;
+   z-index: -1 ;
+}
