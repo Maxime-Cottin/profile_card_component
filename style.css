@@ -89,6 +89,7 @@ body {
 #bgImgs {
    position: absolute;
    z-index: -1;
+   display: none;
 }
 
 .bgTop {
