@@ -1,11 +1,11 @@
-/* Normalize the body of the page */
+/* Normalisation du corps de la page */
 body {
-   /*Normalize the background of the body */
+   /* Normalisation du fond de la page */
    margin: 0;
    background-color: hsl(185, 75%, 39%);
    max-height: 100vh;
    overflow: hidden;
-   /* Normalize the text of the body */
+   /* Normalisation du texte de la page */
    font-family: 'Kumbh Sans', sans-serif;
    font-size: 18px;
    font-weight: 400;
@@ -15,55 +15,68 @@ body {
    justify-content: center;
 }
 
-/* Formatting the profile card */
+/* Mise en forme de la boite carte de profil + liens */
 #container {
    display: flex;
    align-content: center;
    flex-direction: column;
-   margin-top: 50vh;
+   margin-top: 45vh;
    transform: translate(0, -50%);
 }
 
+/* Mise en forme de la carte de profil */
 .cardContainer {
    background-color: white;
-   border-radius: 18px;
-   width: 360px;
-   min-width: 360px;
-   height: 370px;
-   min-height: 370px;
+   border-radius: 20px;
+   width: 465px;
+   min-width: 465px;
+   height: 500px;
+   min-height: 500px;
    overflow: hidden;
 }
 
+/* Mise en forme de la partie haute de la carte de profil */
 .upCard {
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-image: url(/images/bg-pattern-card.svg);
+   background-image: url(../images/bg-pattern-card.svg);
    background-repeat: no-repeat;
    background-size: 100%;
 }
 
+
+/* Mise en forme de la photo de profil */
 .upCard img {
-   width: 95px;
+   width: 130px;
    border-radius: 50%;
-   border: white solid 8px;
+   border: white solid 5px;
    margin-left: auto;
    margin-right: auto;
-   margin-top: 90px;
+   margin-top: 115px;
    margin-bottom: 10px;
 }
 
+/* Mise en forme des textes de la partie haute de la carte */
 .upCard p {
-   margin: 0;
-   margin-bottom: 10px;
+   font-size: 28px;
+   margin-bottom: 5px;
 }
 
 .upCard p:last-child {
-   font-size: 12px;
+   font-size: 18px;
    border-bottom: hsl(227, 10%, 46%) solid 1px;
    padding-bottom: 30px;
+   margin: 10px 0 25px 0;
 }
 
+.boldText {
+   font-size: 28px;
+   font-weight: 700;
+   color: black;
+}
+
+/* Mise en forme de la partie basse de la carte */
 .botCard {
    display: flex;
    flex-direction: row;
@@ -74,33 +87,28 @@ body {
 }
 
 .statsContainer p {
-   padding-top: 5px;
-   margin-top: 5px;
+   margin-top: 10px;
    font-size: 12px;
-}
-
-/* Text Settings */
-.boldText {
-   font-weight: 700;
-   color: black;
 }
 
 /* Placement of the background images */
 #bgImgs {
    position: absolute;
-   z-index: -1;
-   display: none;
+   z-index: -100;
 }
 
 .bgTop {
+   position: absolute;
    top: 0;
    left: 0;
-   transform: translate(-50%, -50%);
+   transform: translate(-100%, -50%);
 }
 
 .bgBot {
-   float: right;
-   transform: translate(50%, -50%);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   transform: translate(110%, 140%);
 }
 
 /* Attribution settings */
@@ -108,4 +116,12 @@ body {
    font-size: 10px;
    text-align: center;
    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+   #container {
+      transform: scale(0.75);
+      margin-top: 10%;
+   }
 }
